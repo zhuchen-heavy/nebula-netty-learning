@@ -15,6 +15,9 @@ import java.util.Set;
  * <p>
  * NIO的server
  * 参考：https://www.cnblogs.com/shihuc/p/6559025.html
+ *
+ * NIO 底层实现原理：https://www.cnblogs.com/crazymakercircle/p/10225159.html
+ * https://tech.meituan.com/2016/11/04/nio.html
  * </p>
  *
  * @author: zhu.chen
