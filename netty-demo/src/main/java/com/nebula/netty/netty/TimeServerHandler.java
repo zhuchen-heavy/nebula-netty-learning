@@ -19,7 +19,6 @@ import java.time.LocalDateTime;
  */
 public class TimeServerHandler extends ChannelHandlerAdapter {
 
-    @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         // 类似于JDK中的ByteBuffer
         ByteBuf buf = (ByteBuf) msg;
@@ -35,7 +34,6 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
         ctx.write(resp);
     }
 
-    @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         // 将缓存数组中的数据写入SocketChannel
         ctx.flush();
