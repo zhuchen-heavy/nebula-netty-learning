@@ -32,6 +32,13 @@ public class ByteBufferTest {
     public static void main(String[] args) {
         // ByteBuffer.allocate()：单位是字节
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+        String value = "netty权威指南";
+        byteBuffer.put(value.getBytes());
+        byteBuffer.flip();
+        byte[] vArray = new byte[byteBuffer.remaining()];
+        byteBuffer.get(vArray);
+        String decodeValue = new String(vArray);
+        System.out.println(decodeValue);
     }
 
 }
