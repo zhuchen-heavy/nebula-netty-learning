@@ -34,6 +34,7 @@ public class EchoClient {
                                 public void channelActive(ChannelHandlerContext ctx) throws Exception {
                                     for (int i = 0; i < 10; i++) {
                                         ctx.writeAndFlush(Unpooled.copiedBuffer(ECHO_QUERY.getBytes()));
+                                        Thread.sleep(6000);
                                     }
                                 }
 

@@ -22,6 +22,7 @@
     <modules>
         <module>netty-demo</module>
         <module>netty-httpserver</module>
+        <module>netty-example</module>
     </modules>
 
     <!--

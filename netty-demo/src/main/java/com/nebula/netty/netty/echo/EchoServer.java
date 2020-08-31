@@ -12,6 +12,7 @@ import io.netty.handler.codec.string.StringDecoder;
 
 public class EchoServer {
 
+    // https://juejin.im/post/6844904083032113159
     public static void main(String[] args) throws InterruptedException {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
