@@ -57,6 +57,16 @@ public class EchoServer {
                         }
                     });
             ChannelFuture future = serverBootstrap.bind(8080).sync();
+            // 添加监听器，在future完成后，调用
+            future.addListener(new ChannelFutureListener() {
+
+                @Override
+                public void operationComplete(ChannelFuture future) throws Exception {
+                    System.out.println("future绑定是否成功：" + future.isSuccess());
+                    System.out.println("完成了。");
+                }
+
+            });
             future.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();
